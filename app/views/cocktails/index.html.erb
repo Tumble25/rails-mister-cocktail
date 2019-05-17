@@ -1,5 +1,18 @@
-<h1>My list of cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-  <h2><%= cocktail.name %></h2>
-<% end %>
-<%= link_to "Create new cocktail",   new_cocktail_path %>
+<div class="banner" style='background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=image_path("drinks.jpg")%>);'>
+
+  <div class="container">
+    <h1>My list of cocktails</h1>
+    <div class="cards">
+      <% @cocktails.each do |cocktail| %>
+      <div class="card-product">
+      <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+      </div>
+      <% end %>
+
+    </div>
+    <%=link_to(image_tag("adddrink.png"), new_cocktail_path)%>
+
+  </div>
+</div>
+
+
