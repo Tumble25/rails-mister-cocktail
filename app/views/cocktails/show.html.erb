@@ -1,9 +1,17 @@
-<h2><%= @cocktail.name %></h2>
-<% @cocktail.doses.each do |dose| %>
-  <p><%= dose.ingredient.name %></p>
-  <p><%= dose.description %></p>
-<% end %>
+<div class="card-category" style='background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @cocktail.photo%>);'>
+  <!-- <div class="container"> -->
+    <h1><%= @cocktail.name %></h1>
+    <div class="card-category-ingredients">
+    <% @cocktail.doses.each do |dose| %>
+    <p><%= dose.description %> <%= dose.ingredient.name %> </p>
+    <% end %>
+    </div>
+  </div>
+<div class="buttonlayout">
+    <%= link_to "Add ingredients",   new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
 
-<%= link_to "Add ingredients",   new_cocktail_dose_path(@cocktail) %>
+    <%= link_to "Overview cocktails",cocktails_path, class: "btn btn-primary" %>
+ <!--  </div> -->
 
-<%= link_to "Return to overview cocktails",cocktails_path %>
+</div>
+

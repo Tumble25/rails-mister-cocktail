@@ -1,9 +1,53 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 20px;
 }
 
+.card-category {
+  padding-top:0px;
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category-ingredients{
+  margin:20px;
+}
+
+.card-overview{
+  padding-top:0px;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width:200px;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}p{
+  margin: 0;
+}
+
+h1{
+  text-align:center;
+}
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
@@ -14,7 +58,7 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -38,3 +82,5 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+
